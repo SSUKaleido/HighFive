@@ -9,6 +9,8 @@ TagManager:
   - Lper
   - Rgood
   - Lgood
+  - Cper
+  - Cgood
   layers:
   - Default
   - TransparentFX

@@ -70,5 +70,26 @@ public class TimingManager : MonoBehaviour
         Debug.Log("Miss");
         theEffect.NoteMissEffect();
     }
-
+    public void CheckTiming3(){ //오른쪽 판정 체크
+        for(int i = 0; i< boxNoteList.Count; i++){
+            if(boxNoteList[i].GetComponent<note>().noteCperfect){
+                boxNoteList[i].GetComponent<note>().HideNote();
+                theEffect.NotePerfectEffect();
+                boxNoteList.RemoveAt(i);
+                Debug.Log("Hit perfect");
+                player.GetComponent<PlayerController>().Score += 10;
+                return;
+            }
+            if(boxNoteList[i].GetComponent<note>().noteCgood){
+                boxNoteList[i].GetComponent<note>().HideNote();
+                theEffect.NoteGoodEffect();
+                boxNoteList.RemoveAt(i);
+                Debug.Log("Hit good");
+                player.GetComponent<PlayerController>().Score += 5;
+                return;
+            }
+        }
+        Debug.Log("Miss");
+        theEffect.NoteMissEffect();
+    }
 }

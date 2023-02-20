@@ -9,6 +9,8 @@ public class note : MonoBehaviour
     public bool noteLperfect = false;
     public bool noteRgood = false;
     public bool noteLgood = false;
+    public bool noteCperfect = false;
+    public bool noteCgood = false;
 
     UnityEngine.UI.Image notelmage;
 
@@ -38,6 +40,12 @@ public class note : MonoBehaviour
         if(collision.CompareTag("Lgood")){
             noteLgood = true;
         }
+        if(collision.CompareTag("Cgood")){
+            noteCgood = true;
+        }
+        if(collision.CompareTag("Cper")){
+            noteCperfect = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision){
         if(collision.CompareTag("Rper")){
@@ -51,6 +59,12 @@ public class note : MonoBehaviour
         }
         if(collision.CompareTag("Lgood")){
             noteLgood = false;
+        }
+        if(collision.CompareTag("Cgood")){
+            noteCgood = false;
+        }
+        if(collision.CompareTag("Cper")){
+            noteCperfect = false;
         }
     }
 }

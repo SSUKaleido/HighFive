@@ -14,12 +14,16 @@ public class NoteManager : MonoBehaviour
 
     int [] Lnotelist = {1,1,1,0,1,0,1,1,1,1,0,0,1,0,0,1,0,1,0,1,1,1,1,0,0,0,1,1,1,0,1,0,1,1,0,1,1,0,0,1,0,0,1,0,1,0,1,1,1,1,0,0,0,1,0,0,0,1,0,0};
     int [] Rnotelist = {0,1,0,1,0,1,0,0,1,0,1,1,0,1,1,0,1,0,1,0,0,1,0,0,1,0,0,0,0,1,0,1,0,0,1,1,0,0,1,0,0,1,0,1,0,1,0,0,1,0,0,1,0,0,0,1,0,0,0,1};
+    int [] Cnotelist = {1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,0,1,0};
 
     [SerializeField] Transform tfNoteAL = null;
     [SerializeField] GameObject goNote = null;
 
     [SerializeField] Transform tfNoteAR = null;
     [SerializeField] GameObject goNote2 = null;
+
+    [SerializeField] Transform tfNoteAC = null;
+    [SerializeField] GameObject goNote3 = null;
     
     TimingManager theTimingManager;
 
@@ -33,15 +37,21 @@ public class NoteManager : MonoBehaviour
         currentTime += Time.deltaTime;
 
         if( currentTime >= 60d/bpm && checkn <60){
-            if(Lnotelist[checkn] == 1){
+            if(Lnotelist[checkn] == 1){//왼쪽 노트 생성
                 GameObject L_node = Instantiate(goNote, tfNoteAL.position, Quaternion.identity);
                 L_node.transform.SetParent(this.transform);
                 theTimingManager.boxNoteList.Add(L_node); //노드리스트에 넣기
             }
-            if(Rnotelist[checkn] == 1){
+            if(Rnotelist[checkn] == 1){ //오른쪽 노트 생성
                 GameObject R_node = Instantiate(goNote2, tfNoteAR.position, Quaternion.identity);
                 R_node.transform.SetParent(this.transform);
                 theTimingManager.boxNoteList.Add(R_node); //노드리스트에 넣기
+            }
+            if(Cnotelist[checkn] == 1){//가운데 노트 생성
+                GameObject C_node = Instantiate(goNote3, tfNoteAC.position, Quaternion.identity);
+                C_node.transform.SetParent(this.transform);
+                C_node.transform.localScale = new Vector3(40,40,40);
+                theTimingManager.boxNoteList.Add(C_node); //노드리스트에 넣기
             }
             //L_node.transform.localScale = new Vector3(1,1,0);
             currentTime -= 60d/bpm;

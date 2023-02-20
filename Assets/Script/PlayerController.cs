@@ -25,5 +25,9 @@ public class PlayerController : MonoBehaviour
             theTimingManager.CheckTiming2();
             txt.text = "Score : " + Score.ToString();
         }
+        if(Input.GetKeyDown(KeyCode.UpArrow)){ //오른쪽
+            theTimingManager.CheckTiming3();
+            txt.text = "Score : " + Score.ToString();
+        }
     }
 }
