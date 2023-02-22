@@ -70,7 +70,7 @@ public class TimingManager : MonoBehaviour
         Debug.Log("Miss");
         theEffect.NoteMissEffect();
     }
-    public void CheckTiming3(){ //오른쪽 판정 체크
+    public void CheckTiming3(){ //중앙 판정 체크
         for(int i = 0; i< boxNoteList.Count; i++){
             if(boxNoteList[i].GetComponent<note>().noteCperfect){
                 boxNoteList[i].GetComponent<note>().HideNote();
