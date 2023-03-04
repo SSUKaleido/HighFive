@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class NoteManager : MonoBehaviour
 {
@@ -26,11 +27,17 @@ public class NoteManager : MonoBehaviour
     [SerializeField] GameObject goNote3 = null;
     
     TimingManager theTimingManager;
+    public GameObject player;
+    public GameObject result;
+    public Text resultt;
 
     // Update is called once per frame
 
     void Awake(){
         theTimingManager = GetComponent<TimingManager>();
+        player = GameObject.FindWithTag("Player");
+        result = GameObject.Find("Canvas").transform.Find("result").gameObject;
+        resultt = GameObject.Find("Canvas").transform.Find("resultt").GetComponent<Text>();
     }
     void Update() //노드생성
     {
@@ -58,7 +65,22 @@ public class NoteManager : MonoBehaviour
             checkn++;
         }
         if(checkn >= 60 && theTimingManager.boxNoteList.Count == 0){
-            SceneManager.LoadScene(sceneName);
+            int Sc = player.GetComponent<PlayerController>().Score;
+
+            if(Sc > 500){
+                resultt.text = "perfect - 완벽해! 당신은 나의 뮤즈야";
+                
+            }
+            else if(Sc >100){
+                resultt.text = "good - 당신이 점점 마음에 들어";
+            }
+            else{
+                resultt.text = "bad - 조금 실망인걸 lady";
+
+            }
+            result.SetActive(true);
+            resultt.gameObject.SetActive(true);
+            StartCoroutine(Scenem());
         }
     }
 
@@ -68,4 +90,10 @@ public class NoteManager : MonoBehaviour
             theTimingManager.boxNoteList.Remove(collision.gameObject);
         }
     }
+
+    IEnumerator Scenem()
+{
+	yield return new WaitForSeconds( 1.0f );
+    SceneManager.LoadScene(sceneName);
+}
 }

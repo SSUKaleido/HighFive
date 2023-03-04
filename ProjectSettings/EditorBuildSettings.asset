@@ -27,6 +27,33 @@ EditorBuildSettings:
     path: Assets/Scenes/Mozart_1_2.unity
     guid: 6a7af4a24eba629418f2d3eaabb93890
   - enabled: 1
+    path: Assets/Scenes/Mozart_2.unity
+    guid: f42b89c5eb2f2f249872d6f4a0d7b7cd
+  - enabled: 1
+    path: Assets/Scenes/Mozart_3.unity
+    guid: 9886f71f1dcec714d9acaf59dd7fef25
+  - enabled: 1
+    path: Assets/Scenes/Mozart_4_B.unity
+    guid: d993d5742301afc418a41088b2a7ed9f
+  - enabled: 1
+    path: Assets/Scenes/Mozart_4_H.unity
+    guid: aa4e3a39b67778b45ae1e1ea5612c6c9
+  - enabled: 1
+    path: Assets/Scenes/Mozart_4_H1.unity
+    guid: bc74ec284056a6c40b5d4f09e02d8ab6
+  - enabled: 1
+    path: Assets/Scenes/Mozart_4_H2.unity
+    guid: ccaf9b169f8b9684793bef3fbc6a35da
+  - enabled: 1
+    path: Assets/Scenes/Mozart_4_H3.unity
+    guid: 76de393f63944ad44851660b6f9115de
+  - enabled: 1
+    path: Assets/Scenes/Mozart_4_HS.unity
+    guid: bf9f35350e8394b41a2421a8bdc15eb2
+  - enabled: 1
+    path: Assets/Scenes/Mozart_4_N.unity
+    guid: 1e80caa1cd7ea2a4f855f4ba7dd74324
+  - enabled: 1
     path: Assets/Scenes/Rhythm1.unity
     guid: 33953619b7d561b40972cd8c55f98fb5
   - enabled: 1

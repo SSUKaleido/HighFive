@@ -23,7 +23,15 @@ public class SceneMove : MonoBehaviour
     public void MoveToR3(){    //리듬게임3으로 이동
         SceneManager.LoadScene("Rhythm3");
     }
-
+    public void MoveToMH2(){
+        SceneManager.LoadScene("Mozart_4_H2");
+    }
+    public void MoveToMH3(){
+        SceneManager.LoadScene("Mozart_4_H3");
+    }
+    public void MoveToMH1(){
+        SceneManager.LoadScene("Mozart_4_H1");
+    }
 
 
 
