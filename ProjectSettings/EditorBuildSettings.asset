@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Beet_1.unity
     guid: 24dc209ac60875345a5e11dd62666909
   - enabled: 1
+    path: Assets/Scenes/Mozart_1.unity
+    guid: eb82ed9477d5a104c960666ed0ffd84c
+  - enabled: 1
+    path: Assets/Scenes/Mozart_1_2.unity
+    guid: 6a7af4a24eba629418f2d3eaabb93890
+  - enabled: 1
     path: Assets/Scenes/Rhythm1.unity
     guid: 33953619b7d561b40972cd8c55f98fb5
   - enabled: 1

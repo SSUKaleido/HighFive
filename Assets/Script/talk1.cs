@@ -51,6 +51,12 @@ public class talk1 : MonoBehaviour
             
                 talkname.text = "베토벤";
             }
+            else if(showCnt[strCnt] == 2){
+                talkname.text = "모차르트";
+            }
+            else if(showCnt[strCnt] == 3){
+                talkname.text = "다른 남자1";
+            }
             else{
                 talkname.text = "주인공";
             }
