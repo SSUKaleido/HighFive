@@ -21,6 +21,30 @@ EditorBuildSettings:
     path: Assets/Scenes/Beet_1.unity
     guid: 24dc209ac60875345a5e11dd62666909
   - enabled: 1
+    path: Assets/Scenes/Beet_4H.unity
+    guid: 236b131ee4d37c64b8e44040ca457aa3
+  - enabled: 1
+    path: Assets/Scenes/Beet_4H1.unity
+    guid: 2df9de38825b68c4ba1f1082e8390836
+  - enabled: 1
+    path: Assets/Scenes/Beet_4H2.unity
+    guid: 1136e2d3396699e488085fb18a860a17
+  - enabled: 1
+    path: Assets/Scenes/Beet_4H3.unity
+    guid: 293c5f7748bb23e46963c10d03e31a88
+  - enabled: 1
+    path: Assets/Scenes/Beet_4B.unity
+    guid: 274885b0b732f8142bc8c9bbe0a86dbb
+  - enabled: 1
+    path: Assets/Scenes/Beet_4HS.unity
+    guid: c4cb7580fa2e3414597c43b81ea57b64
+  - enabled: 1
+    path: Assets/Scenes/Beet_4N.unity
+    guid: 3430abbee35f7f340a3969c76864c20d
+  - enabled: 1
+    path: Assets/Scenes/Beet_4NS.unity
+    guid: 44475b15e79cc7a4799e7c8128dcf38e
+  - enabled: 1
     path: Assets/Scenes/Mozart_1.unity
     guid: eb82ed9477d5a104c960666ed0ffd84c
   - enabled: 1
@@ -65,4 +89,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Beet_3_2.unity
     guid: be52b032b78a21348895b95080c9e6fe
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 553deb553cc4d9d4abbc9c8ad777f27e
   m_configObjects: {}

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class NoteManager : MonoBehaviour
+public class NoteManager_3 : MonoBehaviour
 {
     public int bpm = 0; //1분당 비트 수
     public int checkn = 0; //노드 개수 체크
@@ -67,42 +67,23 @@ public class NoteManager : MonoBehaviour
         }
         if(checkn >= 60 && theTimingManager.boxNoteList.Count == 0){
             int Sc = player.GetComponent<PlayerController>().Score;
-            if(composer == 1){
-                if(Sc > 500){
+            if(Sc > 500){
                 resultt.text = "perfect - 완벽해! 당신은 나의 뮤즈야";
-                ScoreManager.BeetS += 3;
                 
             }
             else if(Sc >100){
                 resultt.text = "good - 당신이 점점 마음에 들어";
-                ScoreManager.BeetS += 2;
             }
             else{
                 resultt.text = "bad - 조금 실망인걸 lady";
-                ScoreManager.BeetS += 1;
 
             }
-            }
-            else{
-                if(Sc > 500){
-                resultt.text = "perfect - 귀여우시네요(웃으면서) 사람도 많은데 조심히 다녀요";
-                ScoreManager.BeetS += 3;
-                
-            }
-            else if(Sc >100){
-                resultt.text = "good - 괜찮으세요? 조심히 다녀요 (걱정하는 목소리)";
-                ScoreManager.BeetS += 2;
-            }
-            else{
-                resultt.text = "bad - 조심하세요 (예의상?)";
-                ScoreManager.BeetS += 1;
-
-            }
-            }
+            
             
             result.SetActive(true);
             resultt.gameObject.SetActive(true);
             StartCoroutine(Scenem());
+
         }
     }
 
@@ -116,6 +97,15 @@ public class NoteManager : MonoBehaviour
     IEnumerator Scenem()
 {
 	yield return new WaitForSeconds( 1.0f );
-    SceneManager.LoadScene(sceneName);
+    if(ScoreManager.BeetS > 7){
+        SceneManager.LoadScene("Beet_4H");
+    }
+    else if(ScoreManager.BeetS > 4){
+        SceneManager.LoadScene("Beet_4N");
+    }
+    else{
+        SceneManager.LoadScene("Beet_4B");
+    }
+    
 }
 }
