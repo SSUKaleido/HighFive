@@ -67,7 +67,7 @@ public class NoteManager : MonoBehaviour
         }
         if(checkn >= 60 && theTimingManager.boxNoteList.Count == 0){
             int Sc = player.GetComponent<PlayerController>().Score;
-            if(composer == 1){
+            if(composer == 1){ //베토벤
                 if(Sc > 500){
                 resultt.text = "perfect - 완벽해! 당신은 나의 뮤즈야";
                 ScoreManager.BeetS += 3;
@@ -83,7 +83,7 @@ public class NoteManager : MonoBehaviour
 
             }
             }
-            else{
+            else{//모차르트 
                 if(Sc > 500){
                 resultt.text = "perfect - 귀여우시네요(웃으면서) 사람도 많은데 조심히 다녀요";
                 ScoreManager.BeetS += 3;
