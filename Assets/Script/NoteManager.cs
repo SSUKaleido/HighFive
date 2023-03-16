@@ -30,7 +30,7 @@ public class NoteManager : MonoBehaviour
     public GameObject player;
     public GameObject result;
     public Text resultt;
-    public int composer;
+
 
     // Update is called once per frame
 
@@ -67,8 +67,8 @@ public class NoteManager : MonoBehaviour
         }
         if(checkn >= 60 && theTimingManager.boxNoteList.Count == 0){
             int Sc = player.GetComponent<PlayerController>().Score;
-            if(composer == 1){ //베토벤
-                if(Sc > 500){
+             //베토벤
+            if(Sc > 500){
                 resultt.text = "perfect - 완벽해! 당신은 나의 뮤즈야";
                 ScoreManager.BeetS += 3;
                 
@@ -82,24 +82,6 @@ public class NoteManager : MonoBehaviour
                 ScoreManager.BeetS += 1;
 
             }
-            }
-            else{//모차르트 
-                if(Sc > 500){
-                resultt.text = "perfect - 귀여우시네요(웃으면서) 사람도 많은데 조심히 다녀요";
-                ScoreManager.BeetS += 3;
-                
-            }
-            else if(Sc >100){
-                resultt.text = "good - 괜찮으세요? 조심히 다녀요 (걱정하는 목소리)";
-                ScoreManager.BeetS += 2;
-            }
-            else{
-                resultt.text = "bad - 조심하세요 (예의상?)";
-                ScoreManager.BeetS += 1;
-
-            }
-            }
-            
             result.SetActive(true);
             resultt.gameObject.SetActive(true);
             StartCoroutine(Scenem());

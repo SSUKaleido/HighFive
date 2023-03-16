@@ -10,8 +10,8 @@ public class NoteManager_3 : MonoBehaviour
     public int checkn = 0; //노드 개수 체크
 
     double currentTime = 0d;
-    public string sceneName; //다음씬이름
-    //엘리제를 위하여
+    
+    //그대는 사랑
 
     int [] Lnotelist = {1,1,0,1,1,0,1,0,1,1,1,0,1,0,0,1,0,1,0,1,1,1,1,0,0,0,0,1,1,0,0,0,0,1,0,1,1,0,0,1,0,0,1,0,1,0,1,1,1,1,0,0,0,1,0,0,0,1,0,0};
     int [] Rnotelist = {1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,0,1,0,1,0,0,0,1,1,0,0,1,1,0,0,1,0,0,1,0,1,0,1,0,0,1,0,0,1,0,0,0,1,0,0,0,1};
@@ -30,7 +30,8 @@ public class NoteManager_3 : MonoBehaviour
     public GameObject player;
     public GameObject result;
     public Text resultt;
-    public int composer;
+
+
 
     // Update is called once per frame
 
@@ -69,13 +70,15 @@ public class NoteManager_3 : MonoBehaviour
             int Sc = player.GetComponent<PlayerController>().Score;
             if(Sc > 500){
                 resultt.text = "perfect - 완벽해! 당신은 나의 뮤즈야";
-                
+                ScoreManager.BeetS += 3;
             }
             else if(Sc >100){
                 resultt.text = "good - 당신이 점점 마음에 들어";
+                ScoreManager.BeetS += 2;
             }
             else{
                 resultt.text = "bad - 조금 실망인걸 lady";
+                ScoreManager.BeetS += 1;
 
             }
             
