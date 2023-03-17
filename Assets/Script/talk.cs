@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class talk : MonoBehaviour
 {
-    int talkCnt = 4; //대화 개수
+    int talkCnt = 3; //대화 개수
     int strCnt = 0; //현재 대화수
     string[] talks; //대화 리스트
     public Text txt; //대화 출력
@@ -65,13 +65,13 @@ public class talk : MonoBehaviour
         talks[0] = "어쩌구 저쩌구";                    
         talks[1] = "엥 진짜 베토벤..? 여긴 어디지? 내 옷은 또 왜이래";
         talks[2] = "으악!!";
-        talks[3] = "어이, 조심하라구 lady";
+        //talks[3] = "어이, 조심하라구 lady";
 
         // 캐릭터의 등장 순서
         showCnt[0] = 1;     // 베토벤
         showCnt[1] = 0;     // 주인공
         showCnt[2] = 0;     // 주인공
-        showCnt[3] = 1;     // 베토벤
+        //showCnt[3] = 1;     // 베토벤
         
     }
 }

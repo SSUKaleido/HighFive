@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 553deb553cc4d9d4abbc9c8ad777f27e
   - enabled: 1
-    path: Assets/Scenes/Room.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Beet_2.unity
     guid: 91c33e6e9e358d74093785e92452ab53
   - enabled: 1
@@ -20,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Beet_1.unity
     guid: 24dc209ac60875345a5e11dd62666909
+  - enabled: 1
+    path: Assets/Scenes/Beet_1_2.unity
+    guid: 1c72b2771b252dc4091f3bf99b283660
   - enabled: 1
     path: Assets/Scenes/Beet_4H.unity
     guid: 236b131ee4d37c64b8e44040ca457aa3
