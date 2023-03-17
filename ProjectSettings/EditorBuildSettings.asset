@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 553deb553cc4d9d4abbc9c8ad777f27e
+  - enabled: 1
     path: Assets/Scenes/Room.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Beet_2.unity
     guid: 91c33e6e9e358d74093785e92452ab53
@@ -85,11 +85,23 @@ EditorBuildSettings:
     guid: 7f1cbf40fe59f174394ee66e7f4ab8ca
   - enabled: 1
     path: Assets/Scenes/Rhythm3.unity
-    guid: 496a3a8cf9be87a4585c4f0f7b55c417
+    guid: 59da2c1170a4af044bdddcd36acc7945
+  - enabled: 1
+    path: Assets/Scenes/Rhythm4.unity
+    guid: 95589201b2f72724287ddc1917498891
+  - enabled: 1
+    path: Assets/Scenes/Rhythm5.unity
+    guid: 74cded54eeb6f5e48afc6c0cc1252d65
+  - enabled: 1
+    path: Assets/Scenes/Rhythm6.unity
+    guid: f0d62658e6b98144489b10c63f41ab6c
   - enabled: 1
     path: Assets/Scenes/Beet_3_2.unity
     guid: be52b032b78a21348895b95080c9e6fe
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 553deb553cc4d9d4abbc9c8ad777f27e
+    path: Assets/Scenes/room2.unity
+    guid: 6d20841908c4b1d45a410254838c9ec2
+  - enabled: 1
+    path: Assets/Scenes/room_S.unity
+    guid: be3bd81423f431d4dae5f2d67aadcae0
   m_configObjects: {}

@@ -11,11 +11,10 @@ public class NoteManager_M_1 : MonoBehaviour
 
     double currentTime = 0d;
     public string sceneName; //다음씬이름
-    //엘리제를 위하여
 
-    int [] Lnotelist = {1,1,0,1,1,0,1,0,1,1,1,0,1,0,0,1,0,1,0,1,1,1,1,0,0,0,0,1,1,0,0,0,0,1,0,1,1,0,0,1,0,0,1,0,1,0,1,1,1,1,0,0,0,1,0,0,0,1,0,0};
-    int [] Rnotelist = {1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,0,1,0,1,0,0,0,1,1,0,0,1,1,0,0,1,0,0,1,0,1,0,1,0,0,1,0,0,1,0,0,0,1,0,0,0,1};
-    int [] Cnotelist = {0,0,0,0,1,1,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,0,1,0};
+    int [] Lnotelist = {1,1,0,1,1,0,1,1,0,0,0,1,0,0,1,1,1,0,0,0,1,0,1,1,0,1,0,1,0,0,1,0,0,0,0,1,1,0,0,0,1,1,0,1,1,0,1,1,0,1,0,1,0,1,1,0,1,1,0,1};
+    int [] Rnotelist = {1,1,1,0,1,1,0,0,1,0,1,0,0,0,0,0,0,1,0,1,1,1,0,0,1,0,1,1,0,0,0,1,0,0,1,0,1,0,0,1,0,0,1,0,1,1,0,0,1,1,1,1,1,1,1,1,0,0,1,1};
+    int [] Cnotelist = {1,0,1,1,0,1,1,0,0,1,0,0,1,1,0,0,1,0,1,0,0,1,1,0,0,0,0,0,1,1,0,0,1,1,0,0,0,1,1,0,0,0,0,1,0,1,1,1,0,1,0,1,0,1,0,1,1,0,0,1};
 
     [SerializeField] Transform tfNoteAL = null;
     [SerializeField] GameObject goNote = null;
@@ -69,16 +68,16 @@ public class NoteManager_M_1 : MonoBehaviour
             int Sc = player.GetComponent<PlayerController>().Score;
              //베토벤
             if(Sc > 500){
-                resultt.text = "perfect - 완벽해! 당신은 나의 뮤즈야";
+                resultt.text = "perfect - 귀여우시네요(웃으면서) 사람도 많은데 조심히 다녀요";
                 ScoreManager.MozartS += 3;
                 
             }
             else if(Sc >100){
-                resultt.text = "good - 당신이 점점 마음에 들어";
+                resultt.text = "good - 괜찮으세요? 조심히 다녀요 (걱정하는 목소리)";
                 ScoreManager.MozartS += 2;
             }
             else{
-                resultt.text = "bad - 조금 실망인걸 lady";
+                resultt.text = "bad - 조심하세요 (예의상?)";
                 ScoreManager.MozartS += 1;
 
             }
