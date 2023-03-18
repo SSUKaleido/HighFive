@@ -30,6 +30,7 @@ public class NoteManager_M_3 : MonoBehaviour
     public GameObject player;
     public GameObject result;
     public Text resultt;
+    public string Sname; 
 
 
 
@@ -66,14 +67,15 @@ public class NoteManager_M_3 : MonoBehaviour
             currentTime -= 60d/bpm;
             checkn++;
         }
-        if(checkn >= 60 && theTimingManager.boxNoteList.Count == 0){
+        if(checkn == 60 && theTimingManager.boxNoteList.Count == 0){
+            checkn++;
             int Sc = player.GetComponent<PlayerController>().Score;
-            if(Sc > 500){
+            if(Sc > 600){
                 resultt.text = "perfect - 당신을 항상 지켜주고 싶습니다.";
                 ScoreManager.MozartS += 3;
                 
             }
-            else if(Sc >100){
+            else if(Sc >400){
                 resultt.text = "good - 다음에도 이런일 생기면 부르세요";
                  ScoreManager.MozartS += 2;
             }
@@ -101,6 +103,7 @@ public class NoteManager_M_3 : MonoBehaviour
     IEnumerator Scenem()
 {
 	yield return new WaitForSeconds( 1.0f );
+    
     if(ScoreManager.MozartS > 7){
         SceneManager.LoadScene("Mozart_4_H");
     }

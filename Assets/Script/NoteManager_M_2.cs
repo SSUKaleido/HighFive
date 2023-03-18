@@ -64,7 +64,8 @@ public class NoteManager_M_2 : MonoBehaviour
             currentTime -= 60d/bpm;
             checkn++;
         }
-        if(checkn >= 60 && theTimingManager.boxNoteList.Count == 0){
+        if(checkn == 60 && theTimingManager.boxNoteList.Count == 0){
+            checkn++;
             int Sc = player.GetComponent<PlayerController>().Score;
              //베토벤
             if(Sc > 500){
@@ -72,7 +73,7 @@ public class NoteManager_M_2 : MonoBehaviour
                 ScoreManager.MozartS += 3;
                 
             }
-            else if(Sc >100){
+            else if(Sc >200){
                 resultt.text = "good - 당신과 조금 더 같이 걷고 싶군요";
                 ScoreManager.MozartS += 2;
             }

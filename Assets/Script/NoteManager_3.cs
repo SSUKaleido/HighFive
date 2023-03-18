@@ -66,13 +66,14 @@ public class NoteManager_3 : MonoBehaviour
             currentTime -= 60d/bpm;
             checkn++;
         }
-        if(checkn >= 60 && theTimingManager.boxNoteList.Count == 0){
+        if(checkn == 60 && theTimingManager.boxNoteList.Count == 0){
+            checkn++;
             int Sc = player.GetComponent<PlayerController>().Score;
-            if(Sc > 500){
+            if(Sc > 550){
                 resultt.text = "perfect - 완벽해! 당신은 나의 뮤즈야";
                 ScoreManager.BeetS += 3;
             }
-            else if(Sc >100){
+            else if(Sc >300){
                 resultt.text = "good - 당신이 점점 마음에 들어";
                 ScoreManager.BeetS += 2;
             }

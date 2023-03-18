@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class NoteManager_moonlight : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class NoteManager_moonlight : MonoBehaviour
 
     double currentTime = 0d;
     public string sceneName; //다음씬이름
+
+    public GameObject result;
+    public Text resultt;
     //월광
 
     int [] Lnotelist = {0,0,0,0,0,0,1,1,1,1,0,0,1,1,1,0,0,1,0,0,1,0,0,1,0,0,1,1,0,0,0,1,0,0,0,1,0,1,1,1,0,0,1,1,0,0,0,0,0,0,1,1,1,0,1,1,0,0,0,1};
@@ -26,17 +30,20 @@ public class NoteManager_moonlight : MonoBehaviour
     [SerializeField] GameObject goNote3 = null;
     
     TimingManager theTimingManager;
-
+    public GameObject player;
     // Update is called once per frame
 
     void Awake(){
         theTimingManager = GetComponent<TimingManager>();
+        result = GameObject.Find("Canvas").transform.Find("result").gameObject;
+        resultt = GameObject.Find("Canvas").transform.Find("resultt").GetComponent<Text>();
+        player = GameObject.FindWithTag("Player");
     }
     void Update() //노드생성
     {
         currentTime += Time.deltaTime;
 
-        if( currentTime >= 60d/bpm && checkn <60){
+        if( currentTime >= 60d/bpm && checkn <57){
             if(Lnotelist[checkn] == 1){//왼쪽 노트 생성
                 GameObject L_node = Instantiate(goNote, tfNoteAL.position, Quaternion.identity);
                 L_node.transform.SetParent(this.transform);
@@ -57,8 +64,26 @@ public class NoteManager_moonlight : MonoBehaviour
             currentTime -= 60d/bpm;
             checkn++;
         }
-        if(checkn >= 60 && theTimingManager.boxNoteList.Count == 0){
-            SceneManager.LoadScene(sceneName);
+        if(checkn == 57 && theTimingManager.boxNoteList.Count == 0){
+            checkn++;
+            int Sc = player.GetComponent<PlayerController>().Score;
+            if(Sc > 500){
+                resultt.text = "perfect - 완벽해! 당신은 나의 뮤즈야";
+                ScoreManager.BeetS += 3;
+                
+            }
+            else if(Sc >200){
+                resultt.text = "good - 당신이 점점 마음에 들어";
+                ScoreManager.BeetS += 2;
+            }
+            else{
+                resultt.text = "bad - 조금 실망인걸 lady";
+                ScoreManager.BeetS += 1;
+
+            }
+            result.SetActive(true);
+            resultt.gameObject.SetActive(true);
+            StartCoroutine(Scenem());
         }
     }
 
@@ -68,4 +93,12 @@ public class NoteManager_moonlight : MonoBehaviour
             theTimingManager.boxNoteList.Remove(collision.gameObject);
         }
     }
+    IEnumerator Scenem()
+{
+	yield return new WaitForSeconds( 1.0f );
+    SceneManager.LoadScene(sceneName);
 }
+}
+
+
+

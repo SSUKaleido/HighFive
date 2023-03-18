@@ -64,15 +64,16 @@ public class NoteManager_M_1 : MonoBehaviour
             currentTime -= 60d/bpm;
             checkn++;
         }
-        if(checkn >= 60 && theTimingManager.boxNoteList.Count == 0){
+        if(checkn == 60 && theTimingManager.boxNoteList.Count == 0){
+            checkn++;
             int Sc = player.GetComponent<PlayerController>().Score;
              //베토벤
-            if(Sc > 500){
+            if(Sc > 550){
                 resultt.text = "perfect - 귀여우시네요(웃으면서) 사람도 많은데 조심히 다녀요";
                 ScoreManager.MozartS += 3;
                 
             }
-            else if(Sc >100){
+            else if(Sc >200){
                 resultt.text = "good - 괜찮으세요? 조심히 다녀요 (걱정하는 목소리)";
                 ScoreManager.MozartS += 2;
             }
